@@ -13,6 +13,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://raw.github.com/chunksnbits/jquery-quickfit/master/script/jquery.quickfit.js" type="text/javascript" charset="utf-8"></script>  
 
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+        $(window).on('resize', function() {
+          $('#quickfit-a').quickfit({ max: 40, min: 20, truncate: false });
+          $('#quickfit-b').quickfit({ max: 40, min: 20, truncate: true });      
+        });
+        $(window).trigger('resize');    
+      });
+    </script>
+    
     <style type="text/css" media="screen">
       .demo {
         font-family:sans-serif;
@@ -22,6 +32,8 @@
         white-space:nowrap
        }
     </style>
+    
+    
   </head>
 
   <body>
