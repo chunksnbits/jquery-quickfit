@@ -109,7 +109,7 @@ font-size without requiring a relayout on a subsequent fit.
 
 Overview and Demo
 =================
-You can see jquery-quickfit in action [here](http://akquinet.github.com/jquery-quickfit-demo) (Resize to see effect).
+You can see jquery-quickfit in action [here](http://chunksnbits.github.com/jquery-quickfit/) (Resize to see effect).
 
 
 License
