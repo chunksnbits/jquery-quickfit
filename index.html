@@ -9,6 +9,19 @@
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>Jquery-quickfit</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://raw.github.com/chunksnbits/jquery-quickfit/master/script/jquery.quickfit.js" type="text/javascript" charset="utf-8"></script>  
+
+    <style type="text/css" media="screen">
+      .demo {
+        font-family:sans-serif;
+        margin:10px 0; 
+        background:#A1D8FF;
+        width:50%; 
+        white-space:nowrap
+       }
+    </style>
   </head>
 
   <body>
@@ -31,32 +44,14 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p>
-    .demo {
-      font-family:sans-serif;
-      margin:10px 0; 
-      background:#A1D8FF;
-      width:50%; 
-      white-space:nowrap
-     }
-  </p>
 
-<p></p> 
-    Min: 60, Max: 100 without truncate option
-   
+        <div id="quickfit-a" class="demo">
+          Min: 60, Max: 100 without truncate option
+        </div>
 
-<p></p> 
-    Min: 60, Max: 100 with truncate option
-   
-
-
-  $(function() {
-    $(window).on('resize', function() {
-      $('#quickfit-a').quickfit({ max: 40, min: 20, truncate: false });
-      $('#quickfit-b').quickfit({ max: 40, min: 20, truncate: true });      
-    });
-    $(window).trigger('resize');    
-  });
+        <div id="quickfit-b" class="demo">
+          Min: 60, Max: 100 with truncate option
+        </div>
 
       </section>
     </div>
@@ -67,9 +62,7 @@
         <p class="copyright">Jquery-quickfit maintained by <a href="https://github.com/chunksnbits">chunksnbits</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
-    </div>
-
-    
+    </div>    
 
   </body>
 </html>
