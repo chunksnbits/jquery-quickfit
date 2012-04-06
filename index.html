@@ -16,8 +16,8 @@
     <script type="text/javascript" charset="utf-8">
       $(function() {
         $(window).on('resize', function() {
-          $('#quickfit-a').quickfit({ max: 24, min: 14, truncate: false });
-          $('#quickfit-b').quickfit({ max: 24, min: 14, truncate: true });      
+          $('#quickfit-a').quickfit({ max: 48, min: 24, truncate: false });
+          $('#quickfit-b').quickfit({ max: 48, min: 24, truncate: true });      
         });
         $(window).trigger('resize');    
       });
@@ -60,11 +60,11 @@
       <section id="main_content" class="inner">
 
         <div id="quickfit-a" class="demo">
-          Min: 14, Max: 100 without truncate option
+          Min: 24, Max: 48 without truncate option
         </div>
 
         <div id="quickfit-b" class="demo">
-          Min: 14, Max: 100 with truncate option
+          Min: 24, Max: 48 with truncate option
         </div>
 
       </section>
