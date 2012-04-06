@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quickfit Demo</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../script/jquery.quickfit.js" type="text/javascript" charset="utf-8"></script>  
+  
+  <style type="text/css" media="screen">
+    .demo {
+      font-family:sans-serif;
+      margin:10px 0; 
+      background:#A1D8FF;
+      width:50%; 
+      white-space:nowrap
+     }
+  </style>
+</head style="width:100%">
+
+  <div id="quickfit-a" class="demo">
+    Min: 60, Max: 100 without truncate option
+  </div>
+  
+  <div id="quickfit-b" class="demo">
+    Min: 60, Max: 100 with truncate option
+  </div>
+  
+<body>
+<script type="text/javascript" charset="utf-8">
+  $(function() {
+    $(window).on('resize', function() {
+      $('#quickfit-a').quickfit({ max: 40, min: 20, truncate: false });
+      $('#quickfit-b').quickfit({ max: 40, min: 20, truncate: true });      
+    });
+    $(window).trigger('resize');    
+  });
+</script>
