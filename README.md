@@ -106,11 +106,9 @@ which brings perfect results, but causes frequent re-layouts and thus is rather 
 quickfit calculates an onetime size invariant estimate for a text length and uses this to guesstimate the best
 font-size without requiring a relayout on a subsequent fit.
 
-
-Overview and Demo
-=================
-You can see jquery-quickfit in action [here](http://chunksnbits.github.com/jquery-quickfit/) (Resize to see effect).
-
+Demo
+====
+You can see jquery-quickfit in action [here](http://chunksnbits.github.com/jquery-quickfit/) (Resize to see effect). A more complex szenario in a production environment, can be found [here](http://www.four-downs.com/livedrafts/13533) (14x16 table cells to be fitted on init pageload/resize).
 
 License
 =======
