@@ -5,12 +5,13 @@ jquery-quickfit-plugin is a quick and dirty solution to fit html text into its s
 jquery-quickfit is for you, if:
 
 * you want to resize a great number of items in a short amount of time
+* you want to resize an item multiple times (e.g., on window resize)
 * you can live with a small level of inaccuracy
 * you want to autofit a single line of text
 
 jquery-quickfit is not for you, if:
 
-* you need to fit a small amount of text
+* you need to fit a small amount of text only once
 * you need a 100% accurate fit of the text into its container
 * you want to fit a paragraph of text, spanning multiple lines
 
@@ -104,7 +105,7 @@ Options
 
 How it works
 ============
-Instead of using the 'resize until fit'-approach (e.g., as described [here](http://stackoverflow.com/questions/687998/auto-size-dynamic-text-to-fill-fixed-size-container)), 
+Instead of using the shrink-to-fit-approach (e.g., as described [here](http://stackoverflow.com/questions/687998/auto-size-dynamic-text-to-fill-fixed-size-container)), 
 which brings perfect results, but causes frequent re-layouts and thus is rather slow when dealing with multiple resizes,
 quickfit calculates an onetime size invariant estimate for a text length and uses this to guesstimate the best
 font-size without requiring a relayout on a subsequent fit.
@@ -112,6 +113,11 @@ font-size without requiring a relayout on a subsequent fit.
 Demo
 ====
 You can see jquery-quickfit in action [here](http://chunksnbits.github.com/jquery-quickfit/) (Resize to see effect). A more complex szenario in a production environment, can be found [here](http://www.four-downs.com/livedrafts/13533) (14x16 table cells to be fitted on init pageload/resize).
+
+Performance
+===========
+Rule of the thumb testing has shown quickfit about equally performant against the shrink-to-fit-approach, when resizing a single item once.
+When resizing multiple items, or a single item multiple times, jquery-quickfit outperforms shrink-to-fit significantly, see e.g., [jsperf](http://jsperf.com/jquery-quickfit-single-item-demo) (the test would be very similar to a window resize).
 
 License
 =======
