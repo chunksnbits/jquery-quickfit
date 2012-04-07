@@ -5,12 +5,14 @@ jquery-quickfit-plugin is a quick and dirty solution to fit html text into its s
 jquery-quickfit is for you, if:
 
 * you want to resize a great number of items in a short amount of time
-* can live with a small level of inaccuracy
+* you can live with a small level of inaccuracy
+* you want to autofit a single line of text
 
 jquery-quickfit is not for you, if:
 
 * you need to fit a small amount of text
 * you need a 100% accurate fit of the text into its container
+* you want to fit a paragraph of text, spanning multiple lines
 
 Usage
 =====
@@ -30,7 +32,7 @@ Demo
 Html:
 
 ```html
-<div id="quickfit">Text to fit</div>
+<div id="quickfit">Text to fit*</div>
 ```
 
 Javascript:
@@ -45,6 +47,7 @@ Javascript:
   });
 </script>
 ```
+* in order to work correctly, this line should be styled with the white-space:nowrap option
 
 Options
 =======
