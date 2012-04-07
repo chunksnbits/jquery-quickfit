@@ -34,7 +34,7 @@
 
     get_meassure: (letter) ->
       current_meassure = @meassures[letter]
-      current_meassure = this.set_meassure(letter) unless current_meassure
+      current_meassure = this.set_meassure(letter) if current_meassure == undefined
       return current_meassure
 
     set_meassure: (letter) ->

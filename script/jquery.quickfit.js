@@ -42,7 +42,9 @@
       QuickfitHelper.prototype.get_meassure = function(letter) {
         var current_meassure;
         current_meassure = this.meassures[letter];
-        if (!current_meassure) current_meassure = this.set_meassure(letter);
+        if (current_meassure === void 0) {
+          current_meassure = this.set_meassure(letter);
+        }
         return current_meassure;
       };
 
