@@ -6,7 +6,7 @@
     min: 8
     max: 12
     fit_to_width: null
-    tolerance: 0.15   
+    tolerance: 0.02   
     wrapper: 'parent'
     truncate: false
     lazy: true
@@ -39,8 +39,9 @@
 
     set_meassure: (letter) ->
       text = ''
+      sample_letter = if (letter==' ') then ('&nbsp;') else (letter)
       for index in [0..(@options.sample_number_of_letters-1)]
-        text += letter          
+        text += sample_letter          
       @item.html(text)
       current_meassure = @item.width() / @options.sample_number_of_letters / @options.sample_font_size
       @meassures[letter] = current_meassure
