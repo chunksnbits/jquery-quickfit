@@ -1,4 +1,4 @@
-## Preparing for 1.0.0 (January 9, 2012)
+## Preparing for 1.0.0 (April 9, 2012)
 
 ## 0.3.0 (April 9, 2012)
 
