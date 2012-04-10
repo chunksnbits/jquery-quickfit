@@ -97,7 +97,7 @@ Options
 
 How it works
 ============
-Instead of using the shrink-to-fit-approach (e.g., as described [here](http://stackoverflow.com/questions/687998/auto-size-dynamic-text-to-fill-fixed-size-container)), 
+Instead of using the [shrink-to-fit-approach](http://stackoverflow.com/questions/687998/auto-size-dynamic-text-to-fill-fixed-size-container) or the more performant [shrink-by-ratio-variant](http://stackoverflow.com/a/10053366/1318800), 
 which brings perfect results, but causes frequent re-layouts and thus is rather slow when dealing with multiple resizes,
 quickfit calculates an onetime size invariant estimate for a text length and uses this to guesstimate the best
 font-size without requiring a relayout on a subsequent fit.
