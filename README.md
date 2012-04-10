@@ -4,15 +4,13 @@ jquery-quickfit-plugin is a quick and dirty solution to fit html text into its s
 
 jquery-quickfit is for you, if:
 
-* you want to resize a great number of items in a short amount of time
-* you want to resize an item multiple times (e.g., on window resize)
-* you can live with a small level of inaccuracy
+* you want to resize multiple items in a short amount of time
+* you want good performance when you resize an item multiple times (e.g., on window resize)
 * you want to autofit a single line of text
 
 jquery-quickfit is not for you, if:
 
-* you need to fit a small amount of text only once
-* you need a 100% accurate fit of the text into its container
+* you need to fit a single text once
 * you want to fit a paragraph of text, spanning multiple lines
 
 Usage
@@ -67,13 +65,13 @@ Options
       <td>min</td>
       <td>integer
       <td>8
-      <td>The minimum font-size the element should be sized to
+      <td>The minimum font-size the element can be sized to</td>
     </tr>
     <tr>
       <td>max</td>
       <td>integer</td>
       <td>12</td>
-      <td>The maximum font-size the element should be sized to</td>
+      <td>The maximum font-size the element can be sized to</td>
     </tr>
     <tr>
       <td>truncate</td>
@@ -84,20 +82,14 @@ Options
     <tr>
       <td>tolerance</td>
       <td>float</td>
-      <td>0.15</td>
-      <td>Adds an inside margin to the calculation. The higher the value, the smaller the chance the text will overlap its container. This value should be fiddled with, when using quickfit on different fonts.</td>
+      <td>0.02</td>
+      <td>Adds a padding to the calculation. The higher the value, the smaller the chance the text will overlap its container. This value should be fiddled with, when encountering problems on a certain font.</td>
     </tr>
     <tr>
-      <td>fit_to_width</td>
+      <td>width</td>
       <td>int</td>
       <td>null</td>
       <td>You can default quickfit a size to which the text should be fitted to. Handy when fitting a lot of elements with an equal width.</td>
-    </tr>
-    <tr>
-      <td>lazy</td>
-      <td>boolean</td>
-      <td>true</td>
-      <td>Performs the necessary meassurements only as needed. If set to false, there will be a performance hit on initialization.</td>
     </tr>
   </tbody>    
 </table>
@@ -105,7 +97,7 @@ Options
 
 How it works
 ============
-Instead of using the shrink-to-fit-approach (e.g., as described [here](http://stackoverflow.com/questions/687998/auto-size-dynamic-text-to-fill-fixed-size-container)), 
+Instead of using the [shrink-to-fit-approach](http://stackoverflow.com/questions/687998/auto-size-dynamic-text-to-fill-fixed-size-container) or the more performant [shrink-by-ratio-variant](http://stackoverflow.com/a/10053366/1318800), 
 which brings perfect results, but causes frequent re-layouts and thus is rather slow when dealing with multiple resizes,
 quickfit calculates an onetime size invariant estimate for a text length and uses this to guesstimate the best
 font-size without requiring a relayout on a subsequent fit.
@@ -117,7 +109,7 @@ You can see jquery-quickfit in action [here](http://chunksnbits.github.com/jquer
 Performance
 ===========
 Rule of the thumb testing has shown quickfit about equally performant against the shrink-to-fit-approach, when resizing a single item once.
-When resizing multiple items, or a single item multiple times, jquery-quickfit outperforms shrink-to-fit significantly, see e.g., [jsperf](http://jsperf.com/jquery-quickfit-single-item-demo/2) (the test would be very similar to a window resize).
+When resizing multiple items, or a single item multiple times, jquery-quickfit outperforms shrink-to-fit significantly, see e.g., [jsperf](http://jsperf.com/jquery-quickfit-single-item-demo/3) (the test would be very similar to a window resize).
 
 License
 =======
