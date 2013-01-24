@@ -104,7 +104,7 @@ font-size without requiring a relayout on a subsequent fit.
 
 Demo
 ====
-You can see jquery-quickfit in action [here](http://chunksnbits.github.com/jquery-quickfit/) (Resize to see effect). A more complex szenario in a production environment, can be found [here](http://www.four-downs.com/livedrafts/13533) (14x16 table cells to be fitted on init pageload/resize).
+You can see jquery-quickfit in action [here](http://chunksnbits.github.com/jquery-quickfit/) (Resize to see effect). 
 
 Performance
 ===========
