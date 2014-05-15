@@ -109,7 +109,7 @@ You can see jquery-quickfit in action [here](http://chunksnbits.github.com/jquer
 Performance
 ===========
 Rule of the thumb testing has shown quickfit about equally performant against the shrink-to-fit-approach, when resizing a single item once.
-When resizing multiple items, or a single item multiple times, jquery-quickfit outperforms shrink-to-fit significantly, see e.g., [jsperf](http://jsperf.com/jquery-quickfit-single-item-demo) (the test would be very similar to a window resize).
+When resizing multiple items, or a single item multiple times, jquery-quickfit outperforms shrink-to-fit significantly, see e.g., [jsperf](http://jsperf.com/jquery-quickfit-single-item-demo/11) (the test would be very similar to a window resize).
 
 License
 =======
