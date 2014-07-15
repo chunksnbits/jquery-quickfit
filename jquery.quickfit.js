@@ -162,7 +162,8 @@
     // ... then apply the measurements.
     for (var i = 0; i < measurements.length; i++) {
       var measurement = measurements[i];
-      measurement.$element.css('font-size', measurements.size + "px");
+
+      measurement.$element.css({ fontSize: measurement.size + 'px' });
     }
 
     return $elements;
