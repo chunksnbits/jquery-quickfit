@@ -1,0 +1,23 @@
+{
+  "name": "jquery-quickfit",
+  "version": "1.0.0",
+  "description": "jquery-quickfit-plugin is a quick and dirty solution to auto-resize html text to fit it's surrounding container.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chunksnbits/jquery-quickfit.git"
+  },
+  "keywords": [
+    "jquery",
+    "quickfit",
+    "responsive",
+    "autoresize",
+    "resize",
+    "css"
+  ],
+  "author": "Daniel Eissing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chunksnbits/jquery-quickfit/issues"
+  },
+  "homepage": "https://github.com/chunksnbits/jquery-quickfit#readme"
+}
