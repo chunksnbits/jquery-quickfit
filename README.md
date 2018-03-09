@@ -1,3 +1,8 @@
+#### *DEPRECATED (This plugin is no longer maintained*
+#### Archive:
+
+---
+
 A quick and dirty way to fit your text
 ======================================
 jquery-quickfit-plugin is a quick and dirty solution to fit html text into its surrounding container. 
